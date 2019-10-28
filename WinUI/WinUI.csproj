@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95118834-02E4-4700-B0B6-9914EB4F9207}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TFSManager</RootNamespace>
+    <AssemblyName>TFSManager</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/TFSGlobalListEdit/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.TextEditor, Version=2.0.0.1462, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Build.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SyntaxHighlightingTextBox, Version=1.0.3419.26008, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SyntaxHighlightingTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="THE.Components, Version=1.0.3334.25227, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\THE.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="XPTable, Version=1.1.11.16404, Culture=neutral, PublicKeyToken=24950705800d2198, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\XPTable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\FindAndReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\FindAndReplaceForm.Designer.cs">
+      <DependentUpon>FindAndReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LoadingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\LoadingPanel.Designer.cs">
+      <DependentUpon>LoadingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LoadingPanelEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\LoadingPanelEx.Designer.cs">
+      <DependentUpon>LoadingPanelEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\XmlTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\BaseChildControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\CollapsibleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Base\CollapsibleControl.Designer.cs">
+      <DependentUpon>CollapsibleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlEditor.Designer.cs">
+      <DependentUpon>ControlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlUsers.Designer.cs">
+      <DependentUpon>ControlUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MSBuildProj\ControlMSBuildProjConfigurations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MSBuildProj\ControlMSBuildProjConfigurations.Designer.cs">
+      <DependentUpon>ControlMSBuildProjConfigurations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MSBuildProj\ControlMSBuildProjSelections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MSBuildProj\ControlMSBuildProjSelections.Designer.cs">
+      <DependentUpon>ControlMSBuildProjSelections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlBuildAgents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlBuildAgents.Designer.cs">
+      <DependentUpon>ControlBuildAgents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlBuildDefinitions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlBuildDefinitions.Designer.cs">
+      <DependentUpon>ControlBuildDefinitions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildDetail\ControlBuildDetailBuildSteps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDetail\ControlBuildDetailBuildSteps.Designer.cs">
+      <DependentUpon>ControlBuildDetailBuildSteps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildDetail\ControlBuildDetailSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDetail\ControlBuildDetailSummary.Designer.cs">
+      <DependentUpon>ControlBuildDetailSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlBuilds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlBuilds.Designer.cs">
+      <DependentUpon>ControlBuilds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildDefinition\ControlDefinitionGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDefinition\ControlDefinitionGeneral.Designer.cs">
+      <DependentUpon>ControlDefinitionGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildDefinition\ControlDefinitionProjectFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDefinition\ControlDefinitionProjectFile.Designer.cs">
+      <DependentUpon>ControlDefinitionProjectFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildDefinition\ControlDefinitionWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDefinition\ControlDefinitionWorkspace.Designer.cs">
+      <DependentUpon>ControlDefinitionWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlGlobalList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlGlobalList.Designer.cs">
+      <DependentUpon>ControlGlobalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlTeamBuildFilterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlTeamBuildFilterPanel.Designer.cs">
+      <DependentUpon>ControlTeamBuildFilterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlTeamBuilds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamBiuild\ControlTeamBuilds.Designer.cs">
+      <DependentUpon>ControlTeamBuilds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlWorkItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlWorkItems.Designer.cs">
+      <DependentUpon>ControlWorkItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ListHeader.Designer.cs">
+      <DependentUpon>ListHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDetail\ControlBuildDetailPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildDetail\ControlBuildDetailPanel.Designer.cs">
+      <DependentUpon>ControlBuildDetailPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAgentCopyTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAgentCopyTo.Designer.cs">
+      <DependentUpon>FormAgentCopyTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAgentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAgentEdit.Designer.cs">
+      <DependentUpon>FormAgentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBrowseTFSFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBrowseTFSFolder.Designer.cs">
+      <DependentUpon>FormBrowseTFSFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBuildAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBuildAssign.Designer.cs">
+      <DependentUpon>FormBuildAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBuildDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBuildDetail.Designer.cs">
+      <DependentUpon>FormBuildDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBuildTemplateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBuildTemplateEdit.Designer.cs">
+      <DependentUpon>FormBuildTemplateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCheckedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheckedList.Designer.cs">
+      <DependentUpon>FormCheckedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDefinitionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDefinitionEdit.Designer.cs">
+      <DependentUpon>FormDefinitionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditBox.Designer.cs">
+      <DependentUpon>FormEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditXml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditXml.Designer.cs">
+      <DependentUpon>FormEditXml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGotoWorkItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGotoWorkItem.Designer.cs">
+      <DependentUpon>FormGotoWorkItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProjectFileCreateWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProjectFileCreateWizard.Designer.cs">
+      <DependentUpon>FormProjectFileCreateWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Base\CollapsibleControl.resx">
+      <DependentUpon>CollapsibleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MSBuildProj\ControlMSBuildProjConfigurations.resx">
+      <DependentUpon>ControlMSBuildProjConfigurations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MSBuildProj\ControlMSBuildProjSelections.resx">
+      <DependentUpon>ControlMSBuildProjSelections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TeamBiuild\ControlBuildAgents.resx">
+      <DependentUpon>ControlBuildAgents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TeamBiuild\ControlBuildDefinitions.resx">
+      <DependentUpon>ControlBuildDefinitions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildDetail\ControlBuildDetailBuildSteps.resx">
+      <DependentUpon>ControlBuildDetailBuildSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildDetail\ControlBuildDetailSummary.resx">
+      <DependentUpon>ControlBuildDetailSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TeamBiuild\ControlBuilds.resx">
+      <DependentUpon>ControlBuilds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildDefinition\ControlDefinitionGeneral.resx">
+      <DependentUpon>ControlDefinitionGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildDefinition\ControlDefinitionProjectFile.resx">
+      <DependentUpon>ControlDefinitionProjectFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildDefinition\ControlDefinitionWorkspace.resx">
+      <DependentUpon>ControlDefinitionWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlGlobalList.resx">
+      <DependentUpon>ControlGlobalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TeamBiuild\ControlTeamBuilds.resx">
+      <DependentUpon>ControlTeamBuilds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlWorkItems.resx">
+      <DependentUpon>ControlWorkItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ListHeader.resx">
+      <DependentUpon>ListHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BuildDetail\ControlBuildDetailPanel.resx">
+      <DependentUpon>ControlBuildDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAgentCopyTo.resx">
+      <DependentUpon>FormAgentCopyTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAgentEdit.resx">
+      <DependentUpon>FormAgentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBrowseTFSFolder.resx">
+      <DependentUpon>FormBrowseTFSFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBuildAssign.resx">
+      <DependentUpon>FormBuildAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBuildDetail.resx">
+      <DependentUpon>FormBuildDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBuildTemplateEdit.resx">
+      <DependentUpon>FormBuildTemplateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDefinitionEdit.resx">
+      <DependentUpon>FormDefinitionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProjectFileCreateWizard.resx">
+      <DependentUpon>FormProjectFileCreateWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\about.png" />
+    <Content Include="Images\AdminUI_1.bmp" />
+    <Content Include="Images\AdminUI_2.bmp" />
+    <Content Include="Images\AdminUI_3.bmp" />
+    <None Include="Images\arrow_down_blue.png" />
+    <None Include="Images\app.png" />
+    <Content Include="Images\agent.png" />
+    <Content Include="Images\apply.png" />
+    <Content Include="Images\arrow_right_blue.png" />
+    <None Include="Images\arrow_up_blue.png" />
+    <Content Include="Images\BuildDefinition.bmp" />
+    <Content Include="Images\BuildDefinitions.bmp" />
+    <Content Include="Images\BuildStatusIcons_1.bmp" />
+    <Content Include="Images\BuildStatusIcons_2.bmp" />
+    <Content Include="Images\BuildStatusIcons_3.bmp" />
+    <Content Include="Images\BuildStatusIcons_4.bmp" />
+    <Content Include="Images\BuildStatusIcons_5.bmp" />
+    <Content Include="Images\BuildStatusIcons_6.bmp" />
+    <Content Include="Images\bullet.gif" />
+    <None Include="Images\Cancel.png" />
+    <Content Include="Images\ContextMenuIcons_1.bmp" />
+    <Content Include="Images\ContextMenuIcons_1.gif" />
+    <Content Include="Images\ContextMenuIcons_2.bmp" />
+    <Content Include="Images\ContextMenuIcons_3.bmp" />
+    <Content Include="Images\ContextMenuIcons_4.bmp" />
+    <Content Include="Images\ContextMenuIcons_5.bmp" />
+    <Content Include="Images\ContextMenuIcons_6.bmp" />
+    <Content Include="Images\Down.bmp" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\ExpandCollapseIcons_2.bmp" />
+    <Content Include="Images\ExpandCollapseIcons_3.bmp" />
+    <None Include="build-detail-success.LOG" />
+    <None Include="build-detail.LOG" />
+    <None Include="Images\minus.jpg" />
+    <None Include="Images\page_white_edit.png" />
+    <None Include="Images\page_white_add.png" />
+    <None Include="Images\page_white_delete.png" />
+    <None Include="Images\export.png" />
+    <None Include="Images\fast forward.png" />
+    <Content Include="Images\file.png" />
+    <None Include="Images\file_find.png" />
+    <Content Include="Images\icon.ico" />
+    <Content Include="Images\icon.png" />
+    <Content Include="Images\info.png" />
+    <None Include="Images\open.png" />
+    <None Include="Images\note.png" />
+    <None Include="Images\information.png" />
+    <Content Include="Images\loading_circle_01.gif" />
+    <None Include="Images\loading_circle_02.gif" />
+    <None Include="Images\loading_circle_03.gif" />
+    <Content Include="Images\page_2_copy.png" />
+    <Content Include="Images\page_redo.png" />
+    <Content Include="Images\page_undo.png" />
+    <Content Include="Images\page_white_copy.png" />
+    <Content Include="Images\page_white_cut.png" />
+    <Content Include="Images\page_white_paste.png" />
+    <Content Include="Images\plusbox.jpg" />
+    <Content Include="Images\QueueStatusIcons_1.bmp" />
+    <Content Include="Images\QueueStatusIcons_2.bmp" />
+    <Content Include="Images\QueueStatusIcons_3.bmp" />
+    <Content Include="Images\QueueStatusIcons_4.bmp" />
+    <Content Include="Images\QueueStatusIcons_5.bmp" />
+    <None Include="Images\refresh.png" />
+    <Content Include="Images\Resources.Folders_1.bmp" />
+    <Content Include="Images\Resources.Folders_2.bmp" />
+    <Content Include="Images\Resources.Folders_3.bmp" />
+    <Content Include="Images\Resources.Folders_4.bmp" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\script_xml.png" />
+    <Content Include="Images\sort_asc.gif" />
+    <Content Include="Images\sort_desc.gif" />
+    <None Include="Images\spacer16.png" />
+    <Content Include="Images\StandardIcons_2.bmp" />
+    <Content Include="Images\StandardIcons_3.bmp" />
+    <Content Include="Images\TeamExplorerIcons_1.bmp" />
+    <Content Include="Images\TeamExplorerIcons_2.bmp" />
+    <Content Include="Images\TeamProject.gif" />
+    <Content Include="Images\TEIcons_1.bmp" />
+    <Content Include="Images\TEIcons_2.bmp" />
+    <Content Include="Images\TEIcons_3.bmp" />
+    <None Include="Images\text_tree.png" />
+    <Content Include="Images\Up.bmp" />
+    <None Include="Images\user.png" />
+    <None Include="Images\users.png" />
+    <Content Include="Images\VersionControlTEIconStrip.bmp" />
+    <None Include="Images\window.png" />
+    <None Include="Images\warning.png" />
+    <Content Include="Images\WITEIcons.bmp" />
+    <EmbeddedResource Include="Components\FindAndReplaceForm.resx">
+      <DependentUpon>FindAndReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LoadingPanel.resx">
+      <DependentUpon>LoadingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LoadingPanelEx.resx">
+      <DependentUpon>LoadingPanelEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\XmlTextEditor.resx">
+      <DependentUpon>XmlTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlEditor.resx">
+      <DependentUpon>ControlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlUsers.resx">
+      <DependentUpon>ControlUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TeamBiuild\ControlTeamBuildFilterPanel.resx">
+      <DependentUpon>ControlTeamBuildFilterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCheckedList.resx">
+      <DependentUpon>FormCheckedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditBox.resx">
+      <DependentUpon>FormEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditXml.resx">
+      <DependentUpon>FormEditXml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGotoWorkItem.resx">
+      <DependentUpon>FormGotoWorkItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLReservedWords.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{EB44F90A-FBF2-458C-A078-399456FFE068}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

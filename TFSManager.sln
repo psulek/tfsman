@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{65C124BD-AA16-47DF-A39B-665A9D97F423}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\CleanCode.ChameleonRichTextBoxControls.dll = Lib\CleanCode.ChameleonRichTextBoxControls.dll
+		Lib\ICSharpCode.TextEditor.dll = Lib\ICSharpCode.TextEditor.dll
+		Lib\SyntaxHighlightingTextBox.dll = Lib\SyntaxHighlightingTextBox.dll
+		Lib\THE.Components.dll = Lib\THE.Components.dll
+		Lib\XPTable.dll = Lib\XPTable.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI", "WinUI\WinUI.csproj", "{95118834-02E4-4700-B0B6-9914EB4F9207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{EB44F90A-FBF2-458C-A078-399456FFE068}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Debug|x86.Build.0 = Debug|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Release|x86.ActiveCfg = Release|Any CPU
+		{95118834-02E4-4700-B0B6-9914EB4F9207}.Release|x86.Build.0 = Release|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Debug|x86.Build.0 = Debug|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB44F90A-FBF2-458C-A078-399456FFE068}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

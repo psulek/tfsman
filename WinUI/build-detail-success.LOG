@@ -1,0 +1,92 @@
+00000000	10:01:46.513	[2816] ------------------------------------------------------------------------------------------------------------------------ 	
+00000001	10:01:46.513	[2816] Type: BuildStep 	
+00000002	10:01:46.513	[2816]   Field: Name | Value: FirstTarget 	
+00000003	10:01:46.513	[2816]   Field: StartTime | Value: 2008-12-15T14:37:43.1483374Z 	
+00000004	10:01:46.513	[2816]   Field: Status | Value: Succeeded 	
+00000005	10:01:46.513	[2816]   Field: FinishTime | Value: 2008-12-15T14:37:43.1483374Z 	
+00000006	10:01:46.513	[2816]   Field: Message | Value: Initializing build 	
+00000007	10:01:46.513	[2816] ======================================================================================================================== 	
+00000008	10:01:46.528	[2816] Type: BuildStep 	
+00000009	10:01:46.528	[2816]   Field: Name | Value: CoreGet 	
+00000010	10:01:46.528	[2816]   Field: Message | Value: Getting sources 	
+00000011	10:01:46.528	[2816]   Field: FinishTime | Value: 2008-12-15T14:37:58.7414886Z 	
+00000012	10:01:46.528	[2816]   Field: Status | Value: Succeeded 	
+00000013	10:01:46.528	[2816]   Field: StartTime | Value: 2008-12-15T14:37:44.3670406Z 	
+00000014	10:01:46.528	[2816] ======================================================================================================================== 	
+00000015	10:01:46.528	[2816] Type: BuildStep 	
+00000016	10:01:46.528	[2816]   Field: Name | Value: CoreLabel 	
+00000017	10:01:46.528	[2816]   Field: StartTime | Value: 2008-12-15T14:37:59.1633474Z 	
+00000018	10:01:46.528	[2816]   Field: Status | Value: Succeeded 	
+00000019	10:01:46.528	[2816]   Field: FinishTime | Value: 2008-12-15T14:37:59.6789526Z 	
+00000020	10:01:46.528	[2816]   Field: Message | Value: Labeling sources 	
+00000021	10:01:46.528	[2816] ======================================================================================================================== 	
+00000022	10:01:46.528	[2816] Type: ConfigurationSummary 	
+00000023	10:01:46.528	[2816]   Field: TotalStaticAnalysisWarnings | Value: 0 	
+00000024	10:01:46.528	[2816]   Field: LogFile | Value: \\build01\Internal\FAST\FAST-Build-Dev_20081215.153743_1.5.0.0\TeamDebug.txt 	
+00000025	10:01:46.528	[2816]   Field: TotalCompilationErrors | Value: 0 	
+00000026	10:01:46.528	[2816]   Field: Platform | Value: Any CPU 	
+00000027	10:01:46.528	[2816]   Field: TotalStaticAnalysisErrors | Value: 0 	
+00000028	10:01:46.528	[2816]   Field: TotalCompilationWarnings | Value: 525 	
+00000029	10:01:46.528	[2816]   Field: Flavor | Value: TeamDebug 	
+00000030	10:01:46.528	[2816] ======================================================================================================================== 	
+00000031	10:01:46.528	[2816] Type: BuildStep 	
+00000032	10:01:46.528	[2816]   Field: StartTime | Value: 2008-12-15T14:37:59.7570746Z 	
+00000033	10:01:46.528	[2816]   Field: Message | Value: Compiling sources for Any CPU/TeamDebug. 	
+00000034	10:01:46.528	[2816]   Field: FinishTime | Value: 2008-12-15T14:42:06.9507070Z 	
+00000035	10:01:46.528	[2816]   Field: Name | Value: TFSBuild.proj 	
+00000036	10:01:46.528	[2816]   Field: Status | Value: Succeeded 	
+00000037	10:01:46.528	[2816] ======================================================================================================================== 	
+00000038	10:01:46.528	[2816] Type: BuildStep 	
+00000039	10:01:46.528	[2816]   Field: FinishTime | Value: 2008-12-15T14:42:09.7006014Z 	
+00000040	10:01:46.528	[2816]   Field: Status | Value: Succeeded 	
+00000041	10:01:46.544	[2816]   Field: Message | Value: Generating list of changesets and updating work items 	
+00000042	10:01:46.544	[2816]   Field: StartTime | Value: 2008-12-15T14:42:07.1694486Z 	
+00000043	10:01:46.544	[2816]   Field: Name | Value: GetChangeSetsAndUpdateWorkItems 	
+00000044	10:01:46.544	[2816] ======================================================================================================================== 	
+00000045	10:01:46.544	[2816] Type: AssociatedWorkItem 	
+00000046	10:01:46.544	[2816]   Field: WorkItemUri | Value: vstfs:///WorkItemTracking/WorkItem/3516 	
+00000047	10:01:46.544	[2816]   Field: Status | Value: Closed 	
+00000048	10:01:46.544	[2816]   Field: WorkItemId | Value: 3516 	
+00000049	10:01:46.544	[2816]   Field: AssignedTo | Value: Marek Sásik 	
+00000050	10:01:46.544	[2816]   Field: Title | Value: Implement Online file text editor 	
+00000051	10:01:46.544	[2816] ======================================================================================================================== 	
+00000052	10:01:46.544	[2816] Type: AssociatedChangeset 	
+00000053	10:01:46.544	[2816]   Field: ChangesetUri | Value: vstfs:///VersionControl/Changeset/7522 	
+00000054	10:01:46.544	[2816]   Field: ChangesetId | Value: 7522 	
+00000055	10:01:46.544	[2816]   Field: Comment | Value: implemented editor 	
+00000056	10:01:46.544	[2816]   Field: CheckedInBy | Value: MERACREST\MSasik 	
+00000057	10:01:46.544	[2816] ======================================================================================================================== 	
+00000058	10:01:46.544	[2816] Type: AssociatedWorkItem 	
+00000059	10:01:46.544	[2816]   Field: AssignedTo | Value: Marek Sásik 	
+00000060	10:01:46.544	[2816]   Field: Title | Value: Implement FGMS PM Documents - permissions are not implemented 	
+00000061	10:01:46.544	[2816]   Field: WorkItemId | Value: 3688 	
+00000062	10:01:46.544	[2816]   Field: WorkItemUri | Value: vstfs:///WorkItemTracking/WorkItem/3688 	
+00000063	10:01:46.544	[2816]   Field: Status | Value: Closed 	
+00000064	10:01:46.544	[2816] ======================================================================================================================== 	
+00000065	10:01:46.544	[2816] Type: AssociatedChangeset 	
+00000066	10:01:46.544	[2816]   Field: ChangesetId | Value: 7663 	
+00000067	10:01:46.544	[2816]   Field: ChangesetUri | Value: vstfs:///VersionControl/Changeset/7663 	
+00000068	10:01:46.559	[2816]   Field: Comment | Value: added storage permissions to GMSDocument + fixed DatabaseFileStorage AddFile method (added create permission check) 	
+00000069	10:01:46.559	[2816]   Field: CheckedInBy | Value: MERACREST\MSasik 	
+00000070	10:01:46.559	[2816] ======================================================================================================================== 	
+00000071	10:01:46.559	[2816] Type: BuildStep 	
+00000072	10:01:46.559	[2816]   Field: FinishTime | Value: 2008-12-15T14:42:15.7003710Z 	
+00000073	10:01:46.559	[2816]   Field: StartTime | Value: 2008-12-15T14:42:09.7318502Z 	
+00000074	10:01:46.559	[2816]   Field: Status | Value: Succeeded 	
+00000075	10:01:46.559	[2816]   Field: Message | Value: Copying binaries to drop location 	
+00000076	10:01:46.559	[2816]   Field: Name | Value: CoreDropBuild 	
+00000077	10:01:46.559	[2816] ======================================================================================================================== 	
+00000078	10:01:46.559	[2816] Type: BuildStep 	
+00000079	10:01:46.559	[2816]   Field: Status | Value: Succeeded 	
+00000080	10:01:46.559	[2816]   Field: Message | Value: Making release was successfully, drop path in: D:\MainReleases\TeamBuild\FAST\1.5.0.0\20081215_154215\bin 	
+00000081	10:01:46.559	[2816]   Field: FinishTime | Value: 2008-12-15T14:42:16.3097226Z 	
+00000082	10:01:46.559	[2816]   Field: StartTime | Value: 2008-12-15T14:42:16.3097226Z 	
+00000083	10:01:46.559	[2816]   Field: Name | Value: Making release was successfully, drop path in: D:\MainReleases\TeamBuild\FAST\1.5.0.0\20081215_154215\bin 	
+00000084	10:01:46.559	[2816] ======================================================================================================================== 	
+00000085	10:01:46.559	[2816] Type: BuildStep 	
+00000086	10:01:46.559	[2816]   Field: Status | Value: Succeeded 	
+00000087	10:01:46.559	[2816]   Field: Message | Value: Succeeded 	
+00000088	10:01:46.559	[2816]   Field: StartTime | Value: 2008-12-15T14:42:16.9034498Z 	
+00000089	10:01:46.559	[2816]   Field: FinishTime | Value: 2008-12-15T14:42:16.9034498Z 	
+00000090	10:01:46.559	[2816]   Field: Name | Value: BuildCompleted 	
+00000091	10:01:46.559	[2816] ======================================================================================================================== 	
